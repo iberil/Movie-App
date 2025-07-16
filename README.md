@@ -1,59 +1,55 @@
 # MovieApp
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.0.3.
+![MovieApp Ekran Görüntüsü](assets/image.png)
 
-## Development server
+Bu proje, Angular ve Angular Material kullanılarak geliştirilmiş modern bir film listeleme uygulamasıdır. TMDB API'den popüler filmleri çekip, grid/card yapısında şık bir şekilde göstermektedir.
 
-To start a local development server, run:
+## Özellikler ve Yapılanlar
 
-```bash
-ng serve
-```
+### 1. **Angular Material Grid/Card Tasarımı**
+- Her satırda 5 film kartı olacak şekilde responsive ve modern bir grid yapısı oluşturuldu.
+- Kartlar eşit boyutlu ve ortalanmış şekilde dizildi.
+- Her kartta film afişi, adı, çıkış tarihi ve tür bilgisi gösteriliyor.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+### 2. **TMDB API Entegrasyonu**
+- Popüler filmler TMDB API'den dinamik olarak çekiliyor.
+- Film türleri ayrıca TMDB'den çekilip, film kartlarında gösteriliyor.
 
-## Code scaffolding
+### 3. **Arama Çubuğu**
+- Gridin üstünde Angular Material ile modern bir arama çubuğu eklendi (şu an sadece görsel, işlevsellik eklenebilir).
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+### 4. **Film Detay Modalı (Dialog)**
+- Film kartına tıklandığında Angular Material Dialog ile film detayları modal olarak gösterilecek şekilde altyapı hazırlandı.
+- Modalda film adı, afiş, puan, açıklama, türler ve çıkış tarihi gösterilecek.
 
-```bash
-ng generate component component-name
-```
+### 5. **Responsive ve Modern Tasarım**
+- Tüm grid ve kart yapısı responsive olarak tasarlandı.
+- Kartlar, grid ve arama çubuğu Material Design standartlarına uygun şekilde stillendi.
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+### 6. **Ekstra: Proje Görseli**
+- Proje ana başlığı altında `assets/image.png` görseli kullanıldı.
 
-```bash
-ng generate --help
-```
+---
 
-## Building
+## Kurulum ve Çalıştırma
 
-To build the project run:
+1. Bağımlılıkları yükleyin:
+   ```bash
+   npm install
+   ```
+2. Uygulamayı başlatın:
+   ```bash
+   ng serve
+   ```
+3. Tarayıcıda `http://localhost:4200` adresine gidin.
 
-```bash
-ng build
-```
+---
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+## Notlar
+- TMDB API anahtarı ve endpointleri `src/environments/environment.ts` dosyasında tanımlıdır.
+- Daha fazla özellik veya geliştirme için katkıda bulunabilirsiniz.
 
-## Running unit tests
+---
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+**Görsel:**
+![Uygulama Görseli](assets/image.png)

@@ -1,0 +1,14 @@
+<div class="movie-grid">
+  <mat-card *ngFor="let movie of movies" class="movie-card">
+    <img
+      mat-card-image
+      [src]="'https://image.tmdb.org/t/p/w500' + movie.poster_path"
+      alt="{{ movie.title }}"
+    />
+    <mat-card-content>
+      <h2>{{ movie.title }}</h2>
+      <p>{{ movie.release_date | date }}</p>
+      <p>{{ movie.overview | slice:0:100 }}...</p>
+    </mat-card-content>
+  </mat-card>
+</div>

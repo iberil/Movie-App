@@ -1,12 +1,17 @@
+// src/app/app.ts
+
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { bootstrapApplication } from '@angular/platform-browser';
+import { MovieListComponent } from './components/movie-list/movie-list';
+import { appConfig } from './app.config';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
-  templateUrl: './app.html',
-  styleUrl: './app.scss'
+  standalone: true,
+  imports: [MovieListComponent],
+  template: `<app-movie-list></app-movie-list>`,
 })
-export class App {
-  protected title = 'movie-app';
-}
+export class AppComponent {}
+
+// Dışa export edilen `App`, bootstrap işlemini başlatır
+export const App = () => bootstrapApplication(AppComponent, appConfig);
