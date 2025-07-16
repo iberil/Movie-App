@@ -1,6 +1,6 @@
 # MovieApp
 
-![MovieApp Ekran Görüntüsü](assets/image.png)
+![MovieApp Ekran Görüntüsü](src/assets/image.png)
 
 Bu proje, Angular ve Angular Material kullanılarak geliştirilmiş modern bir film listeleme uygulamasıdır. TMDB API'den popüler filmleri çekip, grid/card yapısında şık bir şekilde göstermektedir.
 
@@ -27,7 +27,7 @@ Bu proje, Angular ve Angular Material kullanılarak geliştirilmiş modern bir f
 - Kartlar, grid ve arama çubuğu Material Design standartlarına uygun şekilde stillendi.
 
 ### 6. **Ekstra: Proje Görseli**
-- Proje ana başlığı altında `assets/image.png` görseli kullanıldı.
+- Proje ana başlığı altında `src/assets/image.png` görseli kullanıldı.
 
 ---
 
@@ -52,4 +52,4 @@ Bu proje, Angular ve Angular Material kullanılarak geliştirilmiş modern bir f
 ---
 
 **Görsel:**
-![Uygulama Görseli](assets/image.png)
+![Uygulama Görseli](src/assets/image.png)
