@@ -21,7 +21,7 @@ import { MatInputModule } from '@angular/material/input';
     <div class="movie-list-wrapper">
       <mat-grid-list cols="5" rowHeight="400px" gutterSize="24px">
         <mat-grid-tile *ngFor="let movie of movies">
-          <mat-card class="movie-card">
+          <mat-card class="movie-card" (click)="openDetail(movie)">
             <img mat-card-image [src]="getImageUrl(movie.poster_path)" [alt]="movie.title" />
             <div class="movie-info">
               <div class="movie-title">{{ movie.title }}</div>
@@ -67,5 +67,19 @@ export class MovieListComponent implements OnInit {
 
   getGenreNames(genreIds: number[]): string {
     return genreIds.map(id => this.genres[id]).filter(Boolean).join(', ');
+  }
+
+  openDetail(movie: any) {
+    this.dialog.open(MovieDetailComponent, {
+      data: {
+        title: movie.title,
+        image: this.getImageUrl(movie.poster_path),
+        rating: movie.vote_average,
+        description: movie.overview,
+        genres: this.getGenreNames(movie.genre_ids),
+        release_date: movie.release_date
+      },
+      width: '350px',
+    });
   }
 }
