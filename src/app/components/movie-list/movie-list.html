@@ -1,5 +1,9 @@
 <div class="movie-grid">
-  <mat-card *ngFor="let movie of movies" class="movie-card" (click)="openDetail(movie)">
+  <mat-card
+    *ngFor="let movie of movies$ | async"
+    class="movie-card"
+    (click)="openDetail(movie)"
+  >
     <img
       mat-card-image
       [src]="'https://image.tmdb.org/t/p/w500' + movie.poster_path"
@@ -8,7 +12,7 @@
     <mat-card-content>
       <h2>{{ movie.title }}</h2>
       <p>{{ movie.release_date | date }}</p>
-      <p>{{ movie.overview | slice:0:100 }}...</p>
+      <p>{{ movie.overview | slice: 0:100 }}...</p>
     </mat-card-content>
   </mat-card>
 </div>
